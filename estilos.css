@@ -5,7 +5,7 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.2rem;
-  padding: 4rem;
+  padding: 1rem 4rem;
 }
 
 /*card*/
@@ -63,6 +63,7 @@
   font-size: 0.7rem;
   padding: 0.5rem 2rem;
   transition: all 0.3s ease-in-out;
+  margin-top: 10px;
 }
 
 /*card button hover*/
@@ -176,6 +177,10 @@
   margin-bottom: 1rem;
 }
 
+p.piso{
+  text-align: center;
+}
+
 .card-popup-content .doctor-info h4,
 p {
   margin: 0;
@@ -187,7 +192,7 @@ p {
 }
 
 .card-popup-content .doctor-info p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #373737;
 }
 
@@ -253,6 +258,11 @@ p {
   color: #373737;
   margin: 0;
   text-align: center;
+}
+
+.card-popup .close img{
+  width: 50%;
+  opacity: 0.8;
 }
 
 .card-popup .contacto .action {

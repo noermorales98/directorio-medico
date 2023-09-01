@@ -17,19 +17,23 @@ doctoresInfo.forEach((doctor) => {
     <div class="card-popup">
         <div class="card-popup-content">
             <div class="close">
-                <h3>Información del doctor</h3>
+                <img src="https://noelir3.sg-host.com/wp-content/uploads/2023/06/qds_logoRetina-289x60-1.png" alt="logo-card"/>
                 <i onclick="closePopup(${doctor.id})" class="fa-solid fa-times"></i>
             </div>
             <div class="doctor-info">
                 <h4>${doctor.nombre}</h4>
                 <p>${doctor.especialidad}</p>
             </div>
+            <div class="piso-container">
+              <p class="piso">Piso: ${doctor.piso}</p>
+            </div>
             <div class="contacto">
-                <a href="tel:${doctor.telefono}" target="_blank">
+                <a href="tel:9988435454" target="_blank">
                     <div class="header">
                         <i class="fa-solid fa-phone"></i>
                         <span class="title">Teléfono</span>
-                        <span class="info">${doctor.telefono}</span>
+                        <span class="info">998 843 54 54</span>
+                        <span class="info">Extensión: ${doctor.extension}</span>
                     </div>
                     <span class="action">
                         Llamar
