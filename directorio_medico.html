@@ -1,0 +1,27 @@
+<script
+  src="https://kit.fontawesome.com/412de3a70f.js"
+  crossorigin="anonymous"
+></script>
+
+<div class="filter-section">
+  <input type="text" id="searchInput" placeholder="Buscar por nombre o categoría">
+  <div class="select">
+    <select id="categoryFilter">
+      <option value="">Todas las categorías</option>
+      <!-- Agrega más opciones de categoría según tus necesidades -->
+    </select>
+  </div>
+  <button onclick="filterCards()" id="filterButton">Filtrar</button>
+  <button onclick="clearFilters()" id="clearButton" style="display: none;">Limpiar</button> <!-- Agrega un ID al botón y establece display: none; -->
+
+
+</div>
+
+
+
+<div class="container-cards"></div>
+<script src="datos.js"></script>
+<script src="buscador.js"></script>
+<script src="script.js"></script>
+
+<link rel="stylesheet" href="estilos.css" />

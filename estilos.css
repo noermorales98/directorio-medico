@@ -1,0 +1,372 @@
+/*grid of 4 cards*/
+.container-cards {
+  display: grid;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.7rem;
+}
+
+/*card*/
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 1.4rem 2rem;
+  text-align: left;
+  box-shadow: 0 0 0.7rem rgb(134 134 134 / 24%);
+  transition: all 0.3s ease-in-out;
+}
+
+/*card hover*/
+.card:hover {
+  transform: translateY(-0.5rem);
+}
+
+/*card icon*/
+.card .icon {
+  font-size: 2rem;
+  color: #2827e8;
+}
+
+/*card title*/
+.card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/*card text*/
+.card p {
+  font-size: 0.9rem;
+  color: #202020;
+  margin: 0;
+}
+
+/*card button*/
+.card button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+  background: transparent;
+  border: 2px solid #007bff;
+  border-radius: 4rem;
+  color: #007bff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/*card button hover*/
+.card button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media screen and (max-width: 1260px) {
+  .container-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .container-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-popup-content .doctor-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem !important;
+    margin-bottom: 0rem !important;
+  }
+
+  .card-popup .contacto {
+    grid-gap: 0.5rem !important;
+  }
+
+  .card-popup .contacto a {
+    gap: 0.5rem !important;
+    padding: 0.6rem 1rem !important;
+  }
+
+  .card-popup .contacto .header i {
+    font-size: 1.5rem !important;
+  }
+
+  .card-popup .contacto .header .title {
+    font-size: 0.9rem !important;
+  }
+
+  .card-popup .contacto .action {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filter-section{
+    flex-direction: column!important;
+    align-items: center;
+  }
+
+  .filter-section input, .select, #filterButton, #clearButton{
+    width: 90%!important;
+  }
+
+}
+
+/* Popup container */
+.container-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #ffffffbb;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 99999;
+}
+
+.card-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 1.4rem 2rem;
+  text-align: left;
+  box-shadow: 0 0 0.7rem rgb(134 134 134 / 24%);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-popup-content h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-popup-content .doctor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-popup-content .doctor-info h4,
+p {
+  margin: 0;
+}
+
+.card-popup-content .doctor-info h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.card-popup-content .doctor-info p {
+  font-size: 0.9rem;
+  color: #373737;
+}
+
+.card-popup-content .close {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-popup-content .close h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #797979;
+}
+
+.card-popup-content .close i {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*card contact grid*/
+
+.card-popup .contacto {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0.7rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-popup .contacto {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.card-popup .contacto .header {
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-popup .contacto .header i {
+  font-size: 2rem;
+  color: #202020;
+}
+
+.card-popup .contacto .header .title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #202020;
+}
+
+.card-popup .contacto .header .info {
+  font-size: 0.9rem;
+  color: #373737;
+  margin: 0;
+  text-align: center;
+}
+
+.card-popup .contacto .action {
+  font-size: 0.9rem;
+  color: #373737;
+  margin: 0;
+  text-align: center;
+}
+
+/*card contact*/
+.card-popup .contacto a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 1.4rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 0.1rem rgb(134 134 134 / 44%);
+  text-decoration: none;
+}
+
+/*diseño de filtro de cards*/
+
+.filter-section {
+  display: flex;
+  justify-content: end;
+  gap: 0.4rem;
+  align-items: center;
+  flex-direction: row;
+  margin: 2rem 0;
+}
+
+.filter-section input {
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  width: 15rem;
+  border: 1px solid #ccc;
+}
+
+.filter-section input:focus {
+  outline: none;
+  border: 2px solid #007bff;
+}
+
+
+.select {
+  position: relative;
+  border: 1px solid #eee;
+  width: 12rem;
+  overflow: hidden;
+  background-color: #eee;
+  border-radius: 50px;
+}
+  
+.select:before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    z-index: 5;
+    pointer-events: none;
+}
+  
+.select select {
+    padding: 0.6rem 1rem;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+#filterButton {
+  outline: none;
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#filterButton:hover {
+  background: #0069d9;
+}
+
+#clearButton {
+  outline: none;
+  border: none;
+  background: #202020;
+  color: white;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#clearButton:hover {
+  background: #000000;
+}
