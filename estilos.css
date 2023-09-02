@@ -8,6 +8,8 @@
   padding: 1rem 4rem;
 }
 
+
+
 /*card*/
 .card {
   display: flex;
@@ -117,6 +119,7 @@
 @media screen and (max-width: 600px) {
   .container-cards {
     grid-template-columns: repeat(1, 1fr);
+    padding: 1rem 0.2rem;
   }
 
   .filter-section{
@@ -386,4 +389,21 @@ p {
 
 #clearButton:hover {
   background: #000000;
+}
+
+.more{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more button{
+  outline: none;
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
 }

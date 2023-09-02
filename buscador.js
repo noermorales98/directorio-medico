@@ -1,5 +1,8 @@
 // Función para filtrar las tarjetas
 function filterCards() {
+
+  loadMoreDoctors()
+
   const searchInput = document
     .getElementById("searchInput")
     .value.toLowerCase();
